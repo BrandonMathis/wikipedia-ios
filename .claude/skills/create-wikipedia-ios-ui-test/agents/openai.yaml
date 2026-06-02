@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Wikipedia iOS UI Test"
+  short_description: "Add reliable Wikipedia iOS UI tests"
+  default_prompt: "Use $create-wikipedia-ios-ui-test to add a reliable UI or E2E test to wikipedia-ios."

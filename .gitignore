@@ -4,7 +4,13 @@
 # Vim
 *.sw[op]
 
-.claude/
+# Claude local configuration is ignored, but shared project skills are committed.
+.claude/*
+!.claude/
+!.claude/skills/
+!.claude/skills/**
+.claude/skills/**/.DS_Store
+.claude/skills/.DS_Store
 
 # Xcode/ObjC ignores, copied from https://github.com/github/gitignore/blob/master/Objective-C.gitignore
 /build/

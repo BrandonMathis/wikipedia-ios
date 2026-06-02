@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debug UI Test Failure"
+  short_description: "Record and inspect failing UI tests"
+  default_prompt: "Use $debug-ui-test-failure to record the simulator, inspect the failure artifacts, and debug the UI test from evidence."
