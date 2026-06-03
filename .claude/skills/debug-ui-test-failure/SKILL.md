@@ -1,3 +1,4 @@
+
 ---
 name: debug-ui-test-failure
 description: Record, inspect, and diagnose failing iOS Simulator UI tests from evidence. Use when Xcode/XCTest UI tests fail, especially intermittent or visual failures where simulator state, taps, WebView content, accessibility labels, fixture data, animations, or CI-only behavior must be understood before changing code.
