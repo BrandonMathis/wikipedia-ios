@@ -12,6 +12,7 @@ final class ArticleImageGalleryUITests: XCTestCase {
             .assertVisible()
             .openSearch()
             .focusSearchField()
+            .typeSearchTerm("Bohemia")
             .assertSearchResultVisible(named: "Bohemia")
             .openResult(named: "Bohemia")
             .assertVisible()
