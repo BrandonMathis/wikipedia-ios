@@ -99,13 +99,15 @@ public protocol WMFDeveloperSettingsDataControlling: AnyObject {
         set { try? userDefaultsStore?.save(key: WMFUserDefaultsKey.allowGestureZoomArticleWebview.rawValue, value: newValue) }
     }
 
-    public var showGamesV1: Bool {
-        get { (try? userDefaultsStore?.load(key: WMFUserDefaultsKey.developerSettingsShowGamesV1.rawValue)) ?? false }
-        set { try? userDefaultsStore?.save(key: WMFUserDefaultsKey.developerSettingsShowGamesV1.rawValue, value: newValue) }
+    public var showGamesV2: Bool {
+        get { (try? userDefaultsStore?.load(key: WMFUserDefaultsKey.developerSettingsShowGamesV2.rawValue)) ?? false }
+        set { try? userDefaultsStore?.save(key: WMFUserDefaultsKey.developerSettingsShowGamesV2.rawValue, value: newValue) }
     }
 
     public func clearGamesPersistence() async throws {
-        try await WMFGamesDataController().clearAllSessions()
+        let gamesDataController = WMFGamesDataController()
+        try await gamesDataController.clearAllSessions()
+        gamesDataController.resetAnnouncementSeen()
     }
 
     // MARK: - Reading Challenge Forced States

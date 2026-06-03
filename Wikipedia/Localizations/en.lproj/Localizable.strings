@@ -645,10 +645,13 @@
 "forgot-password-instructions" = "Fill in one of the fields below to receive password reset instructions via email";
 "forgot-password-title" = "Reset password";
 "forgot-password-username-or-email-title" = "Or";
+"games-announcement-maybe-later-button" = "Maybe later";
+"games-announcement-message" = "A new trivia game has arrived, based on Wikipedia content. Guess which event came first in history.";
+"games-announcement-play-button" = "Play";
+"games-announcement-title" = "Play \"Which came first?\"";
 "games-email-report-body-encountered" = "I have encountered a problem with the Wikipedia games feature:";
 "games-email-report-subject" = "Issue Report - Wikipedia games";
 "games-wcf-button-play-title" = "Play today's game";
-"games-wcf-explore-button-archive-title" = "Play the archive";
 "games-wcf-explore-button-review-title" = "Review results";
 "games-wcf-explore-complete-subtitle" = "You scored $1/$2 on today's game. Next game in $3";
 "games-wcf-explore-in-progress-subtitle" = "You're on question $1. Continue guessing which event came first on this day in history.";
@@ -1527,6 +1530,8 @@
 "welcome-languages-search-title" = "Search in over 300 languages";
 "welcome-privacy-subtitle" = "We believe that you should not have to provide personal information to participate in the free knowledge movement. Usage data collected for this app is anonymous.";
 "welcome-privacy-terms-button-text" = "Learn more about our privacy policy and terms of use";
+"which-came-first-article-card-open-hint" = "Opens event related to this article ";
+"which-came-first-articles-section-title" = "Articles from today's game";
 "which-came-first-average-score-label" = "average score";
 "which-came-first-best-streak-label" = "best streak";
 "which-came-first-better-luck" = "Better luck tomorrow!";
