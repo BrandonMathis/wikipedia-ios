@@ -396,6 +396,11 @@ The legacy app-side code often references articles by their full URL strings. So
 
 You will also see a legacy enum called WikimediaProject. This is a deprecated enum in favor of WMFProject. It should not be used in new features.
 
+## Test Authoring
+Tests are architected using apple standard testing SDKs.
+
+For UI tests, we utilize the Robots testing pattern where every screen gets a standalone robot
+
 ## Build and Test
 
 You can use this command to build the app in Terminal:

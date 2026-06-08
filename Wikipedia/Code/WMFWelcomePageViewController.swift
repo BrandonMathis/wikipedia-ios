@@ -109,7 +109,8 @@ class WMFWelcomePageViewController: UIPageViewController, UIPageViewControllerDa
 
     private func configureAndAddNextButton() {
         nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        // Intentional bug to simulate a UI test failure: tapping Next no longer advances onboarding.
+        // nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         nextButton.isUserInteractionEnabled = true
         nextButton.setContentCompressionResistancePriority(.required, for: .horizontal)
         nextButton.titleLabel?.numberOfLines = 1
