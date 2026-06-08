@@ -27,6 +27,7 @@ private let wmfLastRemoteAppConfigCheckAbsoluteTimeKey = "WMFLastRemoteAppConfig
 private let wmfTempAccountConfigCheckAbsoluteTimeKey = "WMFTempAccountConfigCheckAbsoluteTimeKey"
 private let wmfResetPreferredLanguages = "WMFResetPreferredLanguages"
 private let wmfSuppressActivityTabOnboardingForTesting = "WMFSuppressActivityTabOnboardingForTesting"
+private let wmfSuppressGamesAnnouncementForTesting = "WMFSuppressGamesAnnouncementForTesting"
 private let wmfSuppressReadingChallengeAnnouncementForTesting = "WMFSuppressReadingChallengeAnnouncementForTesting"
 
 // KVO context pointers
@@ -867,6 +868,10 @@ final class WMFAppViewController: UITabBarController, AppTabBarDelegate {
                 value: true
             )
         }
+
+        if UserDefaults.standard.bool(forKey: wmfSuppressGamesAnnouncementForTesting) {
+            UserDefaults.standard.set(true, forKey: WMFUserDefaultsKey.hasSeenGamesAnnouncement.rawValue)
+        }
     }
 
     // MARK: - Start/Pause/Resume App
@@ -980,6 +985,11 @@ final class WMFAppViewController: UITabBarController, AppTabBarDelegate {
             resumeAndAnnouncementsCompleteGroup.leave()
             self.performTasksThatShouldOccurAfterBecomeActiveAndResume()
             self.showLoggedOutPanelIfNeeded()
+            let key = WMFUserDefaultsKey.needsDailyGameFeedRefresh.rawValue
+            if UserDefaults.standard.bool(forKey: key) {
+                UserDefaults.standard.removeObject(forKey: key)
+                NotificationCenter.default.post(name: WMFNSNotification.refreshExploreForGamesCard, object: nil)
+            }
         }
 
         dataStore.feedContentController.startContentSources()
