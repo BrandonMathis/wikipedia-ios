@@ -37,7 +37,7 @@ Use this skill to write PR-stable UI tests for `WikipediaUITests` with minimal b
 
 When creating a new test file, start from the packaged template:
 
-- `.claude/skills/wikipedia-uitest-writer/templates/UITestFileSkeleton.swift`
+- [UITestFileSkeleton.swift](templates/UITestFileSkeleton.swift)
 
 The skeleton intentionally relies on `launchWikipediaAppRobot` and existing robots so each new test needs only:
 
@@ -47,7 +47,7 @@ The skeleton intentionally relies on `launchWikipediaAppRobot` and existing robo
 
 If the journey needs new screen mechanics, add or extend a robot instead of adding selectors to the test. Use this companion template only when a new robot is needed:
 
-- `.claude/skills/wikipedia-uitest-writer/templates/RobotSkeleton.swift`
+- [RobotSkeleton.swift](templates/RobotSkeleton.swift)
 
 ## Test Fixtures
 Before writing a test, determine if appropriate fixture data is present. If not present, execute the following steps to build out new fixture data:
